@@ -5,7 +5,13 @@ class CLI
   @user_input = user_input
   @api = API.new 
   end
-  
+
+  def start
+    puts "Welcome To The Cocktail Carousel"
+ 
+    puts "How about the drink of the day?"
+  end
+
   
   
   
