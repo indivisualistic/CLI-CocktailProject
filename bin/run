@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative "../config/environment"
+# Call CLI #start
+CLI.new.start
+
+#Also known as a console.This file executes program. 
