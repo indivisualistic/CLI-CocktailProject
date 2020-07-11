@@ -1,8 +1,6 @@
 # CLI::CocktailProject
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CLI/CocktailProject`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my Cocktail generator project, where not only will I reccomend you a drink that you will enjoy, but also how to make it by providing you the ingredients and step by step instructions.  
 
 ## Installation
 
@@ -14,31 +12,25 @@ gem 'CLI-CocktailProject'
 
 And then execute:
 
-    $ bundle install
+$ bundle install
 
 Or install it yourself as:
-
-    $ gem install CLI-CocktailProject
+$ gem install CLI-CocktailProject
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Instuctions: It's pretty simple! When you run the generator, you'll be asked if you are interested in a drink. You will be given the option of saying yes, by pressing 1 or no, by pressing 2. Please be sure to select one of these options, for you just might not get what you were looking for! If you were satisfied with your drink, you'll now be given the option to get the ingredients and the directions by just pressing 1! If it wasn't for you or you're just plain not interested, you press 2 and you are all set. Maybe one drink is not enough...Well, here you have the choice of asking for another drink by following the same steps ypu did earlier. Have fun...drinks are on me!
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/CLI-CocktailProject. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/<github username>/CLI-CocktailProject/blob/master/CODE_OF_CONDUCT.md).
+Tips are not allowed...but if you're highly impressed by this masterpiece and can see yourself using this for the rest of your life, donate money to a local organization in need!
 
+## Code of Conduct
+
+Drink Responsibly!!!
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
 
-Everyone interacting in the CLI::CocktailProject project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/CLI-CocktailProject/blob/master/CODE_OF_CONDUCT.md).
