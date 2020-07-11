@@ -24,28 +24,31 @@ class CLI
     puts "Wrong input...Please try again!" 
   end
 
-def start
-  puts "Welcome To The Cocktail Carousel"
-  line
-  puts "How about the drink of the day?"
-  line
-  yes_or_no
-  line
-  user_input = gets.strip
-    if user_input == "1"
+  def start
+    puts 'Welcome To The Cocktail Carousel'
+    line
+    puts 'How about the drink of the day?'
+    line
+    yes_or_no
+    line
+    user_input = gets.strip
+    if user_input == '1'
       line
       @api.get_info
       @cocktail = Cocktail.all[i]
-      puts "Drink Name:"
+      puts 'Drink Name:'
       puts Cocktail.all[i].name
       line
-    elsif user_input == "2"
+    elsif user_input == '2'
       line
       thank_you
       exit
+    else
+      puts 'Invalid input, please try again'
+      start
     end
     drink_maker
-end
+  end
 
 def drink_maker
   puts "Would you like to know how to make it?"
