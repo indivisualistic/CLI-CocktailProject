@@ -1,8 +1,7 @@
-# require "CLI/CocktailProject/version"
+require "pry"
+require "httparty"
+require_relative "../lib/api.rb"
+require_relative "../lib/cli.rb"
+require_relative "../lib/cocktail.rb"
 
-# module CLI
-#   module CocktailProject
-#     class Error < StandardError; end
-    # Your code goes here...
-#   end
-# end
+
