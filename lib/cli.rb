@@ -1,9 +1,10 @@
 require 'pry'
 class CLI
-  attr_accessor :user_input, :cocktail
+  attr_accessor :user_input, :cocktail, :i
   def initialize
   @user_input = user_input
   @api = API.new 
+  @i = -1
   end
 
   def start
@@ -22,6 +23,11 @@ class CLI
     
     
   end
+
+  def drink_maker
+    puts "Would you like to know how to make it?"
+  end
+
 
   
   
