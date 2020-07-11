@@ -28,6 +28,18 @@ class CLI
     puts "Would you like to know how to make it?"
   end
 
+  if user_input == "1" 
+    
+    puts Cocktail.all[i].ingredients
+    
+    puts Cocktail.all[i].instructions
+   
+  elsif user_input == "2"
+    
+  else 
+    
+  end
+
 
   
   
