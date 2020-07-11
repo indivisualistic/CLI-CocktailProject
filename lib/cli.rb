@@ -5,6 +5,7 @@ class CLI
   @user_input = user_input
   @api = API.new 
   @i = -1
+  
   end
 
   def line
@@ -23,61 +24,66 @@ class CLI
     puts "Wrong input...Please try again!" 
   end
 
-  def start
-    puts "Welcome To The Cocktail Carousel"
- 
-    puts "How about the drink of the day?"
-  end
-  if user_input == "1"
-    
-    @api.get_info
-    @cocktail = Cocktail.all[i]
-    puts "Drink Name:"
-    puts Cocktail.all[i].name
-    
-  elsif user_input == "2"
-    
-    
-  end
-
-  def drink_maker
-    puts "Would you like to know how to make it?"
-  end
-
-  if user_input == "1" 
-    
-    puts Cocktail.all[i].ingredients
-    
-    puts Cocktail.all[i].instructions
-   
-  elsif user_input == "2"
-    
-  else 
-    
-  end
-
-  def how_to_guide 
-    
-    puts "How about another?"
-
+def start
+  puts "Welcome To The Cocktail Carousel"
+  line
+  puts "How about the drink of the day?"
+  line
+  yes_or_no
+  line
+  user_input = gets.strip
     if user_input == "1"
+      line
       @api.get_info
+      @cocktail = Cocktail.all[i]
+      puts "Drink Name:"
       puts Cocktail.all[i].name
-      drink_maker
+      line
     elsif user_input == "2"
+      line
       thank_you
-    else 
-      invalid_entry
-      start
+      exit
     end
+    drink_maker
+end
+
+def drink_maker
+  puts "Would you like to know how to make it?"
+  line
+  yes_or_no
+  line
+  user_input = gets.chomp
+  if user_input == "1" 
+    line
+    puts Cocktail.all[i].ingredients
+    line
+    puts Cocktail.all[i].instructions
+    how_to_guide
+  elsif user_input == "2"
+    line
+    thank_you
+  else 
+    invalid_entry
+    drink_maker
   end
+ end
+end
+
+def how_to_guide 
+  line
+  puts "How about another?"
+  user_input = gets.chomp
+  if user_input == "1"
+    @api.get_info
+    puts Cocktail.all[i].name
+    drink_maker
+  elsif user_input == "2"
+    thank_you
+  else 
+    invalid_entry
+    start
   end
-
-
-
-  
-  
-  
+end
 
   
 
