@@ -7,6 +7,22 @@ class CLI
   @i = -1
   end
 
+  def line
+    puts ""
+  end
+
+  def thank_you
+    puts "Thank you, come again!"  
+  end
+
+  def yes_or_no
+    puts "Type '1' for yes or '2' for no:"  
+  end
+
+  def invalid_entry
+    puts "Wrong input...Please try again!" 
+  end
+
   def start
     puts "Welcome To The Cocktail Carousel"
  
@@ -43,6 +59,18 @@ class CLI
   def how_to_guide 
     
     puts "How about another?"
+
+    if user_input == "1"
+      @api.get_info
+      puts Cocktail.all[i].name
+      drink_maker
+    elsif user_input == "2"
+      thank_you
+    else 
+      invalid_entry
+      start
+    end
+  end
   end
 
 
