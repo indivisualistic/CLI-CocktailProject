@@ -40,6 +40,12 @@ class CLI
     
   end
 
+  def how_to_guide 
+    
+    puts "How about another?"
+  end
+
+
 
   
   
