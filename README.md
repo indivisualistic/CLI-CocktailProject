@@ -6,16 +6,9 @@ Welcome to my Cocktail generator project, where not only will I recommend you a 
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'CLI-CocktailProject'
-```
+`bundle install`
+run `bin/run`
 
-And then execute:
-
-$ bundle install
-
-Or install it yourself as:
-$ gem install CLI-CocktailProject
 
 ## Usage
 
