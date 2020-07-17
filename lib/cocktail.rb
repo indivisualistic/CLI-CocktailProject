@@ -6,6 +6,7 @@ class Cocktail
     @ingredients = ingredients
     @instructions = instructions
     @@all << self
+
   end
 
   def self.all

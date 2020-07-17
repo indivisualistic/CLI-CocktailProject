@@ -2,7 +2,7 @@ require 'pry'
 class CLI
   attr_accessor :user_input, :cocktail, :i
   def initialize
-  @user_input = user_input
+  @user_input = ""
   @api = API.new 
   @i = -1
   
@@ -24,31 +24,29 @@ class CLI
     puts "Wrong input...Please try again!" 
   end
 
-  def start
-    puts 'Welcome To The Cocktail Carousel'
-    line
-    puts 'How about the drink of the day?'
-    line
-    yes_or_no
-    line
-    user_input = gets.strip
-    if user_input == '1'
+def start
+  puts "Welcome To The Cocktail Carousel"
+  line
+  puts "How about the drink of the day?"
+  line
+  yes_or_no
+  line
+  user_input = gets.strip
+    if user_input == "1"
       line
       @api.get_info
-      @cocktail = Cocktail.all[i]
-      puts 'Drink Name:'
-      puts Cocktail.all[i].name
+      @cocktail = Cocktail.all[-1]
+      puts "Drink Name:"
+      puts @cocktail.name
+      # binding.pry
       line
-    elsif user_input == '2'
+    elsif user_input == "2"
       line
       thank_you
       exit
-    else
-      puts 'Invalid input, please try again'
-      start
     end
     drink_maker
-  end
+end
 
 def drink_maker
   puts "Would you like to know how to make it?"
@@ -58,9 +56,9 @@ def drink_maker
   user_input = gets.chomp
   if user_input == "1" 
     line
-    puts Cocktail.all[i].ingredients
+    puts @cocktail.ingredients
     line
-    puts Cocktail.all[i].instructions
+    puts @cocktail.instructions
     how_to_guide
   elsif user_input == "2"
     line
@@ -78,7 +76,9 @@ def how_to_guide
   user_input = gets.chomp
   if user_input == "1"
     @api.get_info
-    puts Cocktail.all[i].name
+    @cocktail = Cocktail.all[-1]
+    # binding.pry
+    puts @cocktail.name
     drink_maker
   elsif user_input == "2"
     thank_you
@@ -87,25 +87,3 @@ def how_to_guide
     start
   end
 end
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
