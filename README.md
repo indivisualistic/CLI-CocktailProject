@@ -1,5 +1,7 @@
 # CLI::CocktailProject
 
+This is not a test
+
 Welcome to my Cocktail generator project, where not only will I recommend you a drink that you will enjoy, but also how to make it by providing you the ingredients and step by step instructions.  
 
 ## Installation
