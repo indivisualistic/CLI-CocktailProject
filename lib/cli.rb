@@ -74,7 +74,7 @@ def how_to_guide
   line
   puts "How about another?"
   user_input = gets.chomp
-  if user_input == "1"
+    if user_input == "1"
     @api.get_info
     @cocktail = Cocktail.all[-1]
     # binding.pry
