@@ -1,4 +1,3 @@
-require 'pry'
 class CLI
   attr_accessor :user_input, :cocktail, :i
   def initialize
@@ -38,12 +37,14 @@ def start
       @cocktail = Cocktail.all[-1]
       puts "Drink Name:"
       puts @cocktail.name
-      # binding.pry
       line
     elsif user_input == "2"
       line
       thank_you
       exit
+    else 
+      invalid_entry
+      start
     end
     drink_maker
 end
@@ -59,7 +60,7 @@ def drink_maker
     puts @cocktail.ingredients
     line
     puts @cocktail.instructions
-    how_to_guide
+    another_round
   elsif user_input == "2"
     line
     thank_you
@@ -70,14 +71,13 @@ def drink_maker
  end
 end
 
-def how_to_guide 
+def another_round 
   line
   puts "How about another?"
   user_input = gets.chomp
     if user_input == "1"
     @api.get_info
     @cocktail = Cocktail.all[-1]
-    # binding.pry
     puts @cocktail.name
     drink_maker
   elsif user_input == "2"

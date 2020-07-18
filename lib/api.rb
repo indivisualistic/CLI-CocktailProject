@@ -1,7 +1,5 @@
-require 'pry'
-require "httparty"
-
 class API
+
     def get_info
     url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     response = HTTParty.get(url)
