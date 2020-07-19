@@ -1,9 +1,9 @@
 class CLI
-  attr_accessor :user_input, :cocktail, :i
+  attr_accessor :user_input, :cocktail
   def initialize
   @user_input = ""
   @api = API.new 
-  @i = -1
+
   
   end
 
@@ -24,9 +24,9 @@ class CLI
   end
 
 def start
-  puts "Welcome To The Cocktail Carousel"
+  puts "Welcome To The Cocktail Carousel".yellow.bold
   line
-  puts "How about the drink of the day?"
+  puts "How about the drink of the day?".yellow.bold
   line
   yes_or_no
   line
@@ -35,7 +35,8 @@ def start
       line
       @api.get_info
       @cocktail = Cocktail.all[-1]
-      puts "Drink Name:"
+      puts "Drink Name:".green
+      line
       puts @cocktail.name
       line
     elsif user_input == "2"
@@ -57,7 +58,11 @@ def drink_maker
   user_input = gets.chomp
   if user_input == "1" 
     line
+    puts "Ingredients:".blue
+    line
     puts @cocktail.ingredients
+    line
+    puts "Instructions:".red
     line
     puts @cocktail.instructions
     another_round
@@ -78,7 +83,10 @@ def another_round
     if user_input == "1"
     @api.get_info
     @cocktail = Cocktail.all[-1]
+    puts "Drink Name:".green
+    line
     puts @cocktail.name
+    line
     drink_maker
   elsif user_input == "2"
     thank_you
