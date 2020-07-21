@@ -23,7 +23,7 @@ class CLI
     puts "Wrong input...Please try again!" 
   end
 
-def start
+  def start
   puts "Welcome To The Cocktail Carousel".yellow.bold
   line
   puts "How about the drink of the day?".yellow.bold
@@ -48,9 +48,9 @@ def start
       start
     end
     drink_maker
-end
+  end
 
-def drink_maker
+  def drink_maker
   puts "Would you like to know how to make it?"
   line
   yes_or_no
